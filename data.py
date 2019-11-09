@@ -30,11 +30,11 @@ varied = datasets.make_blobs(n_samples=n_samples, cluster_std=[1.0, 2.5, 0.5], r
 
 # save all the generated data sets together
 datasets = [
-    noisy_circles,
-    noisy_moons,
-    varied,
-    aniso,
-    blobs,
-    no_structure]
+    ("noisy_circles", noisy_circles),
+    ("noisy_moons", noisy_moons),
+    ("varied", varied),
+    ("aniso", aniso),
+    ("blobs", blobs),
+    ("no_structure", no_structure)]
 
 print()
