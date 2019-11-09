@@ -1,0 +1,1 @@
+resourcesFolder = "./resources"
