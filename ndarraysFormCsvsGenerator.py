@@ -9,6 +9,7 @@ datasets = []
 
 for fileName in files:
     ndarray = np.genfromtxt(resourcesFolderRelativeRoute + '/' + fileName, delimiter=",")
-    datasets.append(ndarray)
+    fileNameWithoutExtension = fileName.split(".")[0]
+    datasets.append((fileNameWithoutExtension, ndarray))
 
 print(datasets)
