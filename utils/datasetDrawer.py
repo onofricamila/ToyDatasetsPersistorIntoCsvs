@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 from math import floor as floor
+# set matplotlib backend to Qt5Agg to make figure window maximizer work
+import matplotlib
+matplotlib.use('Qt5Agg')
 
 def plotDatasets(datasets):
     # configure fig
@@ -28,4 +31,5 @@ def plotDatasets(datasets):
             # increment data sets index
             i += 1
     # show
+    fig.canvas.manager.window.showMaximized()
     plt.show()
