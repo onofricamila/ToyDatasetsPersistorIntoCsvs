@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from math import pi, cos, sin, radians
 import random
+import numpy as np
 
 # config ------------------------------------------------------------------------------------------
 # circumference properties
@@ -72,4 +73,4 @@ def generateDataset():
 
 
 
-customCircunferencesDataset = generateDataset()
+custom_circumferences = generateDataset()

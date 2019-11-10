@@ -7,7 +7,7 @@ def csvsGenerator(datasets, resourcesFolder):
         os.makedirs(resourcesFolder)
     # iterate over the generated datasets
     for i, (params, dataset) in enumerate(datasets):
-        d = dataset[0] # labels are discarded; we only wanna the points
+        d = dataset
         dName = params['name']
         k = params['k'] # denotes the number of natural clusters
         targetFile = resourcesFolder + dName + '.csv'

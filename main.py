@@ -1,6 +1,6 @@
 from utils.csvsGenerator import csvsGenerator
 from data.sklearnDatasets import no_structure, blobs, aniso, varied, noisy_moons, noisy_circles
-from data.customCircunferencesDataset import customCircunferencesDataset
+from data.customCircumferencesDatasetGenerator import custom_circumferences
 from config import resourcesFolder
 from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
 from utils.datasetDrawer import plotDatasets
@@ -13,8 +13,10 @@ datasets = [
     ({'k': '3', 'name': 'aniso'}, aniso),
     ({'k': '3', 'name': 'blobs'}, blobs),
     ({'k': '2', 'name': 'no_structure'}, no_structure),
-    ({'k': '2', 'name': 'customCircunferencesDataset'}, customCircunferencesDataset)
+    ({'k': '2', 'name': 'custom_circumferences'}, custom_circumferences)
     ] # think about what k would be proper for no_structure
+
+datasets = sorted(datasets, key=lambda x: x[0]['name'])
 
 # print the generated data sets
 plotDatasets(datasets)
