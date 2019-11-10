@@ -1,7 +1,6 @@
 from sklearn import datasets
 import numpy as np
 
-
 # general config
 n_samples = 500 #280
 noise = 0 # .05
@@ -28,13 +27,6 @@ aniso = (X_aniso, y)
 # blobs with varied variances
 varied = datasets.make_blobs(n_samples=n_samples, cluster_std=[1.0, 2.5, 0.5], random_state=random_state)
 
-# save all the generated data sets together
-datasets = [
-    ("noisy_circles", noisy_circles),
-    ("noisy_moons", noisy_moons),
-    ("varied", varied),
-    ("aniso", aniso),
-    ("blobs", blobs),
-    ("no_structure", no_structure)]
+
 
 print()

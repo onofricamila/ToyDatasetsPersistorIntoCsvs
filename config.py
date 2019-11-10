@@ -1,1 +1,1 @@
-resourcesFolder = "./resources"
+resourcesFolder = "./resources/"
