@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from math import floor as floor
-from math import ceil as ceil
 
 def plotDatasets(datasets):
     # configure fig
