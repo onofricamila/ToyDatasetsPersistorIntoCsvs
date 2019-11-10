@@ -1,9 +1,9 @@
-from csvsGenerator import csvsGenerator
+from utils.csvsGenerator import csvsGenerator
 from data.sklearnDatasets import no_structure, blobs, aniso, varied, noisy_moons, noisy_circles
 from data.customCircunferencesDataset import customCircunferencesDataset
 from config import resourcesFolder
-from ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
-from datasetDrawer import plotDatasets
+from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
+from utils.datasetDrawer import plotDatasets
 
 # save all the generated data sets together
 datasets = [
