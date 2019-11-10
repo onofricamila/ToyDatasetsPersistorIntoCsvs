@@ -6,7 +6,7 @@ import csv
 def ndarraysFormCsvsGenerator(resourcesFolder):
     # try to get a list of all the files inside the specified folder
     try:
-        files = os.listdir(resourcesFolder) # returns a list with all the files names inside the specified folder
+        files = sorted(os.listdir(resourcesFolder)) # returns a sorted list with all the files names inside the specified folder
     except BaseException as e:
         print("Could not open resources folder: " + str(e))
         exit()

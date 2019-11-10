@@ -25,7 +25,8 @@ def plotDatasets(datasets):
                 ax.plot(x, y, "o", alpha=0.5, )
                 text = params['name'] + ", k = " + params["k"]
                 ax.set_title(text, size=9)
-            except:
+            except BaseException as e:
+                print(e)
                 # hide subplot
                 ax.axis('off')
             # increment data sets index
