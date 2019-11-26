@@ -18,7 +18,7 @@ Here, a way to persist generated toy datasets is provided. The idea is to make r
    * blobs
    * no_structure
    
-## Important 
+## :grey_exclamation: Important: configuration
 There is a `config` file, used to provide the _paths_ of the folders in which data will be stored. Those paths, have to be specified in a **json** file. This is done because many applicatios (developed in different languages) use the same folders. Here, a `config.json` example is shown:
 
 ```json
