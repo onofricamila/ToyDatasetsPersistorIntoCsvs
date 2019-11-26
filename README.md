@@ -2,7 +2,7 @@
 Here, a way to persist generated toy datasets is provided. The idea is to make random datasets, like the ones generated using sklearn, persist, storing them into .csv files. This is really useful when comparing different machine learning algorithms, to avoid the random component.
 
 ## How to try it
-1. First, config the resources folder path in `config.py` (see below)
+1. First, config the resources folder path in `config.py` (see the 'Important' section below)
 2. Simply run the `main.py` file and you will how:
    * csvsGenerator.py --> takes the provided data sets and iterates over them to generate 1 csv file for each one
    * ndarraysFormCsvsGenerator.py --> as a test, iterates over the files inside the resources folder to obtain ndarrays from the csvs
@@ -33,5 +33,6 @@ There is a `config` file, used to provide the _paths_ of the folders in which da
      }
 }
 ```
+**The path to the json file must be specified in the config file.**
 
    
