@@ -1,6 +1,8 @@
 # ToyDatasetsPersistorIntoCsvs
 Here, a way to persist generated toy datasets is provided. The idea is to make random datasets, like the ones generated using sklearn, persist, storing them into .csv files. This is really useful when comparing different machine learning algorithms, to avoid the random component.
 
+Note that **the number of real clusters (k) is stored in the header of every data set file.**
+
 ## How to try it
 1. First, config the resources folder path in `config.py` (see the 'Important' section below)
 2. Simply run the `main.py` file and you will how:
