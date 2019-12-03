@@ -17,7 +17,7 @@ non_time_series_datasets = [
 
 non_time_series_datasets = sorted(non_time_series_datasets, key=lambda x: x[0]['name'])
 time_series_datasets = [
-     ({'k': '2', 'name': 'custom_circumferences'}, custom_circumferences)
+     ({'k': '', 'name': 'custom_circumferences'}, custom_circumferences)
     ]
 # print the generated data sets
 plotDatasets(non_time_series_datasets + time_series_datasets)

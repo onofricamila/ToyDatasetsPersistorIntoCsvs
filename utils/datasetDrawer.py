@@ -23,7 +23,11 @@ def plotDatasets(datasets):
                 params, dataset = datasets[i]
                 x, y = zip(*dataset)
                 ax.plot(x, y, "o", alpha=0.5, )
-                text = params['name'] + ", k = " + params["k"]
+                k = params["k"]
+                if k == '':
+                    # 'k' was not specified
+                    k = '---'
+                text = params['name'] + ", k = " + k
                 ax.set_title(text, size=9)
             except BaseException as e:
                 print(e)
