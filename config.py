@@ -1,46 +1,41 @@
 import json
 
-csvDatasetsPath = None
-timeSeriesDatasetsPath = None
-nonTimeSeriesDatasetsPath = None
+paths = None
 
-def fetchConfig():
+def _getPaths():
+    return paths
+
+
+def _fetchConfig():
     # we use the global key word to being able to change the values of the variables declared outside the function
-    global csvDatasetsPath
-    global timeSeriesDatasetsPath
-    global nonTimeSeriesDatasetsPath
-
+    global paths
     configFilePath = "/home/camila/Desktop/TESIS/DATA/config.json"
     with open(configFilePath) as f:
         data = json.load(f)
     # fill variables
-    csvDatasetsPath = data.get("csvDatasetsPath")
-    timeSeriesDatasetsPath = data.get("timeSeriesDatasetsPath")
-    nonTimeSeriesDatasetsPath = data.get("nonTimeSeriesDatasetsPath")
+    paths = data.get("paths")
 
 
-def getCsvDatasetsPath():
-    if csvDatasetsPath is not None:
-        return csvDatasetsPath
+def _fetchElementIfNull(_getter):
+    element = _getter()
+    if (element != None):
+        return element
     # else
-    fetchConfig()
-    return csvDatasetsPath
+    _fetchConfig()
+    return _getter()
+
+
+def _getElementFromDict(key, _getter):
+    dict = _fetchElementIfNull(_getter)
+    return dict.get(key)
 
 
 def getNonTimeSeriesDatasetsPath():
-    if nonTimeSeriesDatasetsPath is not None:
-        return nonTimeSeriesDatasetsPath
-    # else
-    fetchConfig()
-    return nonTimeSeriesDatasetsPath
+    return _getElementFromDict(key="nonTimeSeriesDatasetsPath", _getter=_getPaths)
 
 
 def getTimeSeriesDatasetsPath():
-    if timeSeriesDatasetsPath is not None:
-        return timeSeriesDatasetsPath
-    # else
-    fetchConfig()
-    return timeSeriesDatasetsPath
+    return _getElementFromDict(key="timeSeriesDatasetsPath", _getter=_getPaths)
 
 
-resourcesFolder = getCsvDatasetsPath()
+

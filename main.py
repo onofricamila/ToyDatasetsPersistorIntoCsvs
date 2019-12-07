@@ -1,7 +1,7 @@
 from utils.csvsGenerator import csvsGenerator
 from data.sklearnDatasets import no_structure, blobs, aniso, varied, noisy_moons, noisy_circles
 from data.customCircumferencesDatasetGenerator import custom_circumferences
-from config import resourcesFolder, getNonTimeSeriesDatasetsPath, getTimeSeriesDatasetsPath
+from config import getNonTimeSeriesDatasetsPath, getTimeSeriesDatasetsPath
 from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
 from utils.datasetDrawer import plotDatasets
 
