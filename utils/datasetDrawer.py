@@ -6,7 +6,7 @@ matplotlib.use('Qt5Agg')
 
 def plotDatasets(datasets):
     # configure fig
-    rows = floor(len(datasets)/2) # if n° of data sets is odd, we will have an extra row with the remaining elements
+    rows = floor(len(datasets)/2) # if n° of data sets is odd, the last row will be incomplete
     cols = floor(len(datasets)/2)
     fig, axes = plt.subplots(nrows=rows, ncols=cols, constrained_layout=True)
     # data set index
@@ -31,7 +31,7 @@ def plotDatasets(datasets):
                 ax.set_title(text, size=9)
             except BaseException as e:
                 print(e)
-                # hide subplot
+                # hide subplot (if not it will be empty)
                 ax.axis('off')
             # increment data sets index
             i += 1

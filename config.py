@@ -7,7 +7,7 @@ def _getPaths():
 
 
 def _fetchConfig():
-    # we use the global key word to being able to change the values of the variables declared outside the function
+    # we use the global key word to be able to change the values of the variables declared outside the function
     global paths
     configFilePath = "/home/camila/Desktop/TESIS/DATA/config.json"
     with open(configFilePath) as f:
