@@ -1,5 +1,5 @@
 from utils.csvsGenerator import csvsGenerator
-from data.sklearnDatasets import no_structure, blobs, aniso, varied, noisy_moons, noisy_circles
+from data.sklearnDatasets import blobs, aniso, varied, noisy_moons, noisy_circles
 from data.customCircumferencesDatasetGenerator import custom_circumferences
 from config import getNonTimeSeriesDatasetsPath, getTimeSeriesDatasetsPath
 from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
@@ -12,7 +12,6 @@ non_time_series_datasets = [
     ({'k': '3', 'name': 'varied'}, varied),
     ({'k': '3', 'name': 'aniso'}, aniso),
     ({'k': '3', 'name': 'blobs'}, blobs),
-    ({'k': '2', 'name': 'no_structure'}, no_structure),
     ] # think about what k would be proper for no_structure
 
 non_time_series_datasets = sorted(non_time_series_datasets, key=lambda x: x[0]['name'])
