@@ -5,8 +5,8 @@ import numpy as np
 # labels are discarded --> we only wanna the points
 
 # general config
-n_samples = 500 #280
-noise = 0 # .05
+n_samples = 1000 #280
+noise = 0.05 # .05
 
 # circles
 noisy_circles = datasets.make_circles(n_samples=n_samples, factor=.5, noise=noise)[0]
@@ -16,10 +16,6 @@ noisy_moons = datasets.make_moons(n_samples=n_samples, noise=noise)[0]
 
 # blobs
 blobs = datasets.make_blobs(n_samples=n_samples, random_state=8)[0]
-
-# no structure
-no_structure = np.random.rand(n_samples, 2), None
-no_structure = no_structure[0]
 
 # anisotropicly distributed data
 random_state = 170
