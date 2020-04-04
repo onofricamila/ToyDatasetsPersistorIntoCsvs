@@ -1,9 +1,10 @@
+from config import getTimeSeriesDatasetsPath
 from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
 import pandas as pd
 
 def prepareRealDataset():
     originalDatasetFile = "/home/camila/Desktop/TESIS/Datasets/Trayectorias - Taxis/dataset/Californa1.csv"
-    targetFolder = "/home/camila/Desktop/TESIS/DATA/datasets/time_series/"
+    targetFolder = getTimeSeriesDatasetsPath()
     targetFileName = "taxis.csv"
 
     dataFrame = pd.read_csv(originalDatasetFile, sep=';')
