@@ -1,9 +1,13 @@
 from utils.csvsGenerator import csvsGenerator
 from data.sklearnDatasets import blobs, aniso, varied, noisy_moons, noisy_circles
 from data.customCircumferencesDatasetGenerator import custom_circumferences
+from data.taxis import prepareRealDataset
 from config import getNonTimeSeriesDatasetsPath, getTimeSeriesDatasetsPath
 from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
 from utils.datasetDrawer import plotDatasets
+
+prepareRealDataset()
+exit()
 
 # save all the generated data sets together
 non_time_series_datasets = [
@@ -28,3 +32,5 @@ non_time_series_datasets = ndarraysFormCsvsGenerator(getNonTimeSeriesDatasetsPat
 time_series_datasets = ndarraysFormCsvsGenerator(getTimeSeriesDatasetsPath())
 # print the fetched data sets
 plotDatasets(non_time_series_datasets + time_series_datasets)
+
+prepareRealDataset()

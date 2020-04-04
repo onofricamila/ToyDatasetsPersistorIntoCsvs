@@ -6,7 +6,7 @@ import numpy as np
 
 # general config
 n_samples = 1500
-noise = 0.05 
+noise = 0.05
 
 # circles
 noisy_circles = datasets.make_circles(n_samples=n_samples, factor=.5, noise=noise)[0]
