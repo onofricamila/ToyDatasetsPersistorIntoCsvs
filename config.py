@@ -46,6 +46,10 @@ def getTimeSeriesDatasetsPath():
     return _getElementFromDict(key="timeSeriesDatasetsPath", _getter=_getPaths)
 
 
+def getRealDatasetPath():
+    return _getElementFromDict(key="realDatasetPath", _getter=_getPaths)
+
+
 def getRealToyDatasetName():
     return _fetchElementIfNull(_getRealDatasetName)
 

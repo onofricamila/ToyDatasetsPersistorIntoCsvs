@@ -3,7 +3,7 @@ from utils.ndarraysFormCsvsGenerator import ndarraysFormCsvsGenerator
 import pandas as pd
 
 def prepareRealDataset():
-    originalDatasetFile = "/home/camila/Desktop/TESIS/Datasets/Trayectorias - Taxis/dataset/Californa1.csv"
+    originalDatasetFile = "/home/camila/Desktop/TESIS/Datasets/Trayectorias - Taxis/California_all_dataset.csv"
     targetFolder = getTimeSeriesDatasetsPath()
     targetFileName = getRealToyDatasetName() + ".csv"
 
