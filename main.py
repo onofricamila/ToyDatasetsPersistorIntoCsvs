@@ -33,7 +33,3 @@ time_series_datasets = ndarraysFormCsvsGenerator(getTimeSeriesDatasetsPath())
 # print the fetched data sets
 plotDatasets(non_time_series_datasets + time_series_datasets)
 
-<<<<<<< HEAD
-=======
-prepareRealDataset()
->>>>>>> ba636c7ca51c83fecd72d6ae735040c1f6a4fe7b
